@@ -1,0 +1,13 @@
+@import '../../base/color';
+@import '../../base/fonts';
+@import '../../extensions/mixins';
+
+.back-to-top {
+    position: fixed;
+    bottom: 165px;
+    right: 25px;
+    display: none;
+    z-index: 1;
+    box-shadow: 0px 4px 4px rgba(70, 51, 51, 0.25);
+    @include transition (0.2s ease-in);
+}

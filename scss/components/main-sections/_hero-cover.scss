@@ -1,0 +1,13 @@
+@import '../../base/color';
+@import '../../base/fonts';
+@import '../../extensions/mixins';
+
+.hero {
+    height: 100vh;
+    background-color: $primary-theme-color;
+    background-image: url(../img/bg-hero.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12rem 2rem;
+}

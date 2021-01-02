@@ -1,0 +1,8 @@
+@import '../../base/color';
+@import '../../base/fonts';
+@import '../../extensions/mixins';
+
+.section-servicios {
+    background-color: $primary-accent-color;
+    position: relative;
+}

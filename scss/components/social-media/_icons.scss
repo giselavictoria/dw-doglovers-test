@@ -1,0 +1,18 @@
+@import '../../base/color';
+@import '../../base/fonts';
+@import '../../extensions/mixins';
+
+.social-media-icons i {
+    font-size: 1rem;
+    font-weight: 900;
+    margin: 0 1rem;
+    color: $primary-font-color;
+    @include transition (0.2s ease-in);
+
+    &:hover {
+        font-size: 1rem;
+        font-weight: 900;
+        color: $primary-font-color;
+        @include transform (scale(1.1));
+    }
+}

@@ -1,0 +1,25 @@
+@import '../../base/color';
+@import '../../base/fonts';
+@import '../../extensions/mixins';
+
+.my-modal-title {
+    background-color: $secondary-accent-color;
+    color: $primary-font-color;
+    font-family: $secondary-font-family;
+    font-weight: 500;
+}
+
+.my-modal-body {
+    background-color: $secondary-theme-color;
+    color: $primary-font-color;
+    font-family: $secondary-font-family;
+    font-weight: 500;
+}
+
+.my-modal-footer {
+    background-color: $secondary-theme-color;
+    color: $primary-font-color;
+    font-family: $secondary-font-family;
+    font-weight: 500;
+    border-top: none;
+}

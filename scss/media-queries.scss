@@ -1,0 +1,138 @@
+@import 'base/color';
+@import 'base/fonts';
+@import 'extensions/mixins';
+
+/*XS*/
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+
+        & div {
+            width: 3rem;
+            height: 7px;
+            background-color: $third-accent-color;
+            margin-top: 8px;
+            @include transition (all 0.3s ease-in-out);
+        }
+    }
+
+
+    input[type="checkbox"]:checked+.hamburger .first-line {
+        transform: rotate(-45deg);
+        margin-top: 25px;
+    }
+
+    input[type="checkbox"]:checked+.hamburger .second-line {
+        transform: rotate(45deg);
+        margin-top: -7px;
+    }
+
+    input[type="checkbox"]:checked+.hamburger .third-line {
+        opacity: 0;
+        transform: rotate(45deg);
+    }
+
+    .nav-menu {
+        width: 100%;
+        height: 100vh;
+        display: none;
+        position: absolute;
+        top: 6rem;
+        left: 0;
+        background-color: $third-accent-color;
+        overflow: hidden;
+        @include animation (mobile-faded 1s);
+
+        @keyframes mobile-faded {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        & .menu-items {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+
+            & li {
+                margin: 1.5rem 2.5rem 1.5rem 2.5rem;
+
+                & a {
+                    color: $primary-accent-color;
+
+                    &:before {
+                        background-color:$secondary-accent-color;
+                    }
+
+                    &:after {
+                        color: $secondary-accent-color;
+                    }
+                }
+            }
+        }
+    }
+
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked~.nav-menu {
+        display: block;
+    }
+
+}
+
+/*MD*/
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .hamburger {
+        display: none;
+    }
+
+    .whatsapp-container {
+        display: block;
+    }
+
+    .back-to-top {
+        display: block;
+    }
+
+    .dog-container {
+        position: absolute;
+        right: 51px;
+        bottom: 20px;
+    }
+
+}
+
+/*LG*/
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .dog-container {
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+    }
+}
+
+/*XL*/
+@media screen and (min-width: 1201px) and (max-width: 1540px)  {
+    .dog-container {
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+    }
+}
+
+/*XXL*/
+@media screen and (min-width: 1541px) {
+    .dog-container {
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+    }
+}

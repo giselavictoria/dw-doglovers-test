@@ -1,0 +1,73 @@
+@import '../../base/color';
+@import '../../base/fonts';
+@import '../../extensions/mixins';
+
+.section-contacto {
+    background-color: $secondary-theme-color;
+
+    & .form-container {
+        width: 50rem;
+        max-width: 85%;
+        background-color: $primary-theme-color;
+        border-radius: 10px;
+        box-shadow: 0px 4px 4px rgba(70, 51, 51, 0.25);
+        padding: 4rem 2rem;
+        margin: 2rem 0;
+
+        & form label {
+            font-family: $secondary-font-family;
+            font-size: 1rem;
+            font-weight: 400;
+            color: $primary-font-color;
+            margin: 0;
+        }
+
+        & form input {
+            font-family: $secondary-font-family;
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: $primary-font-color;
+            height: 2rem;
+            margin: 0 0 1rem 0;
+            border-radius: 10px;
+            border: 2px solid $primary-font-color;
+
+            &:focus {
+                outline: none;
+                border: 3px solid $secondary-accent-color;
+                border-radius: 10px;
+            }
+
+            &::placeholder {
+                padding-left: 1rem;
+            }
+        }
+
+        & form textarea {
+            font-family: $secondary-font-family;
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: $primary-font-color;
+            margin: 0 0 1rem 0;
+            border-radius: 10px;
+            border: 2px solid $primary-font-color;
+
+            &:focus {
+                outline: none;
+                border: 3px solid $secondary-accent-color;
+                border-radius: 10px;
+            }
+
+            &::placeholder {
+                padding-left: 1rem;
+            }
+        }
+
+        & form>p {
+            font-size: 0.8rem;
+            font-style: italic;
+            align-self: flex-start;
+            margin: 2rem 0 0 0;
+        }
+    }
+}

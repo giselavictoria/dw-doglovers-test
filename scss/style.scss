@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@import 'base/color';
+@import 'base/fonts';
+@import 'base/classes';
+@import 'base/tags';
+@import 'extensions/mixins';
+@import 'extensions/extends';
+@import 'components/buttons/buttons';
+@import 'components/buttons/back-to-top-button';
+@import 'components/buttons/whatsapp-button';
+@import 'components/dividers/wavy-shapes';
+@import 'components/social-media/icons';
+@import 'components/bootstrap/cards';
+@import 'components/bootstrap/my-modal';
+@import 'components/main-sections/header';
+@import 'components/main-sections/hero-cover';
+@import 'components/main-sections/nosotros';
+@import 'components/main-sections/contador';
+@import 'components/main-sections/servicios';
+@import 'components/main-sections/staff';
+@import 'components/main-sections/planes';
+@import 'components/main-sections/contacto';
+@import 'components/main-sections/footer';
+@import 'media-queries';
+
+
+
+
+

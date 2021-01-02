@@ -1,0 +1,107 @@
+@import '../../base/color';
+@import '../../base/fonts';
+@import '../../extensions/mixins';
+
+header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 6rem;
+    background-color: $primary-theme-color;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    width: 4rem;
+}
+
+/* Nav-mobile */
+.nav-menu-mobile {
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* Header - Navbar - Desktop only */
+.nav-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    & .menu-items {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        font-family: $primary-font-family;
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        justify-content: flex-end;
+
+        &  * {
+            @include transition (all 0.35s ease);
+        }
+    }
+}
+
+/* Aquí comienza el efecto de la navbar */
+
+.menu-items li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 1rem;
+    overflow: hidden;
+
+    & a {
+        padding: 0.3rem 0;
+        color: $primary-font-color;
+        position: relative;
+        display: inline-block;
+        margin: 0;
+        text-decoration: none;
+
+        &:before,
+        :after {
+            position: absolute;
+            @include transition (all 0.35s ease);
+        }
+
+        &:before {
+            bottom: 100%;
+            display: block;
+            height: 3px;
+            width: 100%;
+            content: "";
+            background-color: $primary-accent-color;
+        }
+
+        &:after {
+            padding: 0.3rem 0;
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            content: attr(data-hover);
+            color: $primary-accent-color;
+            white-space: nowrap;
+        }
+
+    }
+
+    &:hover a {
+        @include transform (translateY(100%));
+    }
+}
+

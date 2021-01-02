@@ -1,0 +1,17 @@
+@mixin transform ($propiedad) {
+    -webkit-transform: $propiedad;
+    -ms-transform: $propiedad;
+    transform: $propiedad;
+}
+
+@mixin transition ($propiedad) {
+    -webkit-transition: $propiedad;
+    -ms-transition: $propiedad;
+    transition: $propiedad;
+}
+
+@mixin animation ($propiedad) {
+    -webkit-animation: $propiedad;
+    -ms-animation: $propiedad;
+    animation: $propiedad;
+}
